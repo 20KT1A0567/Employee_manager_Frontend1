@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   Container,
@@ -125,9 +124,10 @@ export default function Home() {
           Designed for modern workplaces with powerful features
         </Typography>
 
+        {/* FIXED: Updated Grid syntax for v2 */}
         <Grid container spacing={4}>
           {features.map((feature, index) => (
-            <Grid item xs={12} sm={6} md={3} key={index}>
+            <Grid key={index} xs={12} sm={6} md={3}> {/* REMOVED: item prop */}
               <Card 
                 sx={{ 
                   height: '100%',
@@ -155,8 +155,6 @@ export default function Home() {
           ))}
         </Grid>
       </Container>
-
-      
     </Box>
   );
 }
