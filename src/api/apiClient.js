@@ -2,8 +2,8 @@
 
 import axios from 'axios';
 
-const baseURL = import.meta.env.VITE_API_BASE || 'https://employee-manager-backned-1.onrender.com/api';
-
+const baseURL = import.meta.env.VITE_API_BASE || 'https://employee-manager-backned-2.onrender.com/api';
+console.log("AXIOS BASE URL =", baseURL);
 const api = axios.create({
   baseURL,
   withCredentials: true, 
